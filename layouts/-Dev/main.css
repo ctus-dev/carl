@@ -1,0 +1,12 @@
+.log-user {
+    font-weight: 800;
+    font-size: 18px;
+}
+.log-date {
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+}
+.log-comment {
+    text-indent: 2em;
+}

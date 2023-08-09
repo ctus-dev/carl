@@ -27,6 +27,6 @@ const logItems = [
       </div>
     `;
   });
-  console.log(commentHtml);
-  //const logContainer = document.getElementById("log-container");
-  //logContainer.innerHTML = commentHtml.join("");
+
+  const logContainer = document.getElementById("log-container");
+  logContainer.innerHTML = commentHtml.join("");

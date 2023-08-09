@@ -1,4 +1,14 @@
 $(function() {
+
+  var waitForHtml = function(selector, callback) {
+    if (jQuery(selector).length) {
+      callback();
+    } else {
+      setTimeout(function() {
+        waitForHtml(selector, callback);
+      }, 100);
+    }
+  };
   const logItems = [
       {
         user: "Mad Max",
@@ -29,7 +39,8 @@ $(function() {
       `;
     });
 
-    const logContainer = document.getElementById("log-container");
-    logContainer.innerHTML = commentHtml.join("");
-
+    waitForHtml("#log-container", () => {
+      const logContainer = document.getElementById("log-container");
+      logContainer.innerHTML = commentHtml.join("");
+    });
 });

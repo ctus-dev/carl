@@ -4,6 +4,7 @@ $(function() {
     if (jQuery(selector).length) {
       callback();
     } else {
+      console.log('waiting for html')
       setTimeout(function() {
         waitForHtml(selector, callback);
       }, 100);
